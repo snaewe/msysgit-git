@@ -263,6 +263,7 @@ save_stash () {
 
 	create_stash "$stash_msg" $untracked
 	store_stash -m "$stash_msg" -q $w_commit ||
+	mkdir -p "$GIT_DIR/logs/${ref_stash%/*}"
 	die "$(gettext "Cannot save the current status")"
 	say Saved working directory and index state "$stash_msg"
 
