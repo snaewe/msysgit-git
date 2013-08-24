@@ -354,6 +354,7 @@ GIT-VERSION-FILE: FORCE
 
 CFLAGS = -g -O2 -Wall -Werror \
 	-Wno-pointer-to-int-cast \
+	-Wno-format-zero-length \
 	-Wold-style-definition \
 	-Wdeclaration-after-statement
 LDFLAGS =
